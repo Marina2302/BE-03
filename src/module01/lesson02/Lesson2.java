@@ -5,5 +5,6 @@ public class Lesson2 {
         System.out.println("Changes for commit 1");
         System.out.println("Changes for commit 2");
         System.out.println("Changes for commit 3");
+        System.out.println("Changes for commit 4");
     }
 }
