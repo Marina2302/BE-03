@@ -9,5 +9,6 @@ public class ProgramTask37 {
         short x3 = 7;
         double x4 = 9;
         int x5 = 5;
+        int x6 = 'r';
     }
 }
