@@ -4,6 +4,8 @@ public class ProgramTask39 {
     public static void main(String[] args) {
         int x = 10; // Primitive variables store primitive values.
         String a = "Hello"; // Reference variables store addresses to locations in memory for where the data is stored.
+        Integer b = 10;
+        System.out.println(b.doubleValue()); // it is possible to refer to methods from reference data types
 
         // Stack memory stores primitive types and the addresses (links) of objects.
         // Reference values are objects that are stored in the heap.
