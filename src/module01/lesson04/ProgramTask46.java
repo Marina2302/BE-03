@@ -10,6 +10,6 @@ public class ProgramTask46 {
         System.out.println(a ^ b);
 
         // The bitwise operators are like logical operators
-        // After applying the NOT (~) operator, the number will change sign
+        // After applying the NOT (~) operator, the bits of the number are reversed (0 changes to 1, and 1 changes to 0)
     }
 }
