@@ -2,9 +2,9 @@ package module01.lesson04;
 
 public class ProgramTask47 {
     public static void main(String[] args) {
-        int a = 10;
-        System.out.println(a << 1);
-        System.out.println(a >> 1);
+        int a = 10; //1010
+        System.out.println(a << 1); //10100
+        System.out.println(a >> 1); //101
 
         a = -5;
         System.out.println(a >>> 1);
