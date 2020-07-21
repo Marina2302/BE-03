@@ -21,7 +21,7 @@ public class ProgramTask54 {
 
         // One of the statements isn't true. will be displayed on the console as a result
         // if (b > a) - All statements are false
-        // if (c < 10) - One of statements is true.
+        // if (c != 10) - One of statements is true.
         // if ((c <= b) && (a == b)) - All statements are true.
     }
 }
