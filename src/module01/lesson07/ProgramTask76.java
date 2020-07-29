@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ProgramTask76 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        String y = String.valueOf(x);
+        String y = sc.nextLine();
         boolean duplicated = false;
         for (int j = 0; j < y.length(); j++) {
             for (int k = j + 1; k < y.length(); k++) {
