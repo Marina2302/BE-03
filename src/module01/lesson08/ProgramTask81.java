@@ -8,8 +8,7 @@ public class ProgramTask81 {
         System.out.println("----------");
         div(2, 11);
         System.out.println("----------");
-
-
+        triangle(2,2, 3);
     }
 
     /**
@@ -43,6 +42,19 @@ public class ProgramTask81 {
             if (a % 3 == 0) {
                 System.out.println(a);
             }
+        }
+    }
+
+    /**
+     * Write a method with three parameters that will deduce whether such a triangle is possible.
+     * (Tip: For a triangle, the sum of any two sides must be greater than the third.)
+     * Call it in the main method.
+     */
+    public static void triangle(int a, int b, int c) {
+        if (a + b > c || a + c > b || b + c > a) {
+            System.out.println("A triangle with such sides is possible");
+        } else {
+            System.out.println("A triangle with such sides is not possible");
         }
     }
 }
