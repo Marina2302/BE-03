@@ -6,6 +6,8 @@ public class ProgramTask81 {
         System.out.println("----------");
         sum(2);
         System.out.println("----------");
+        div(2, 11);
+        System.out.println("----------");
 
 
     }
@@ -30,5 +32,17 @@ public class ProgramTask81 {
             sum += i;
         }
         System.out.println(sum);
+    }
+
+    /**
+     * Write a method with two parameters that will print all numbers from the first parameter to the second parameter,
+     * which are divisible by 3. Call it in the main method.
+     */
+    public static void div(int x, int y) {
+        for (int a = x; a <= y; a++) {
+            if (a % 3 == 0) {
+                System.out.println(a);
+            }
+        }
     }
 }
