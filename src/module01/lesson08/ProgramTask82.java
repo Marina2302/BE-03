@@ -4,8 +4,7 @@ public class ProgramTask82 {
     public static void main(String[] args) {
         System.out.println(compare(-2));
         System.out.println("----------");
-
-
+        System.out.println(compareS(5));
     }
 
     /**
@@ -17,6 +16,19 @@ public class ProgramTask82 {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Write a method with one parameter that will call the method from the previous job and, if true, return the string:
+     * "number is greater than zero", otherwise the string "number is zero or less".
+     * In the main method, call it and display it.
+     * Experiment with different parameters.
+     */
+    public static String compareS(int x) {
+        if (compare(x)) {
+            return "number is greater than zero";
+        }
+        return "number is zero or less";
     }
 
 }
