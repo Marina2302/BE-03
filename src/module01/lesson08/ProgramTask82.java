@@ -5,6 +5,8 @@ public class ProgramTask82 {
         System.out.println(compare(-2));
         System.out.println("----------");
         System.out.println(compareS(5));
+        System.out.println("----------");
+        compareN(-7);
     }
 
     /**
@@ -31,4 +33,12 @@ public class ProgramTask82 {
         return "number is zero or less";
     }
 
+    /**
+     * Write a method with one parameter that will call the method from the previous job and additionally return a number.
+     * Example (number is greater than zero and equal to 10) In the main method, call it and display it.
+     * Experiment with different parameters.
+     */
+    public static void compareN(int x) {
+        System.out.println(compareS(x) + " and equal to " + x);
+    }
 }
