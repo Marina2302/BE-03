@@ -51,7 +51,7 @@ public class ProgramTask81 {
      * Call it in the main method.
      */
     public static void triangle(int a, int b, int c) {
-        if (a + b > c || a + c > b || b + c > a) {
+        if (a + b > c && a + c > b && b + c > a) {
             System.out.println("A triangle with such sides is possible");
         } else {
             System.out.println("A triangle with such sides is not possible");
