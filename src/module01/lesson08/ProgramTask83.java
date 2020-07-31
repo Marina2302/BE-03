@@ -42,4 +42,17 @@ public class ProgramTask83 {
         }
         return z;
     }
+
+    // What is method overloading? - is a feature that allows a class to have more than one method having the same name, if their argument lists are different.
+    // How to overload a method? - change the data type in the parameters, change the number of parameters or their sequence
+    // Is this a method overload?
+    //   public static void sum(int a, double b) {
+    //      ...
+    //   }  No
+    //
+    // And this?
+    //   public static double sum(double a, int b) {
+    //      ...
+    //   }
+    // Yes
 }
