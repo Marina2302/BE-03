@@ -94,7 +94,7 @@ public class FinalTask {
     private static void show() {
         for (int i = 0; i <= count; i++) {
             if (books[i].equals(null)) {
-                System.out.println("The library is empty!");
+                System.out.println("The library is empty!"); // не работает
                 break;
             } else {
                 System.out.println(books[i]);
@@ -120,7 +120,7 @@ public class FinalTask {
                 System.out.println("Book added successfully!");
             }
         } else {
-            System.out.println("The library is full!");
+            System.out.println("The library is full!"); // не работает
         }
         System.out.println();
     }
@@ -183,9 +183,15 @@ public class FinalTask {
     }
 
     private static void sort() {
-        Arrays.sort(books);
+        String[] sortArray = new String[count + 1];
+        for (int i = 0; i <= count; i++) {
+            sortArray[i] = books[i];
+        }
+        Arrays.sort(sortArray);
+        for (int i = 0; i <= count; i++) {
+            books[i] = sortArray[i];
+        }
         show();
-        System.out.println();
     }
 
     private static void exit() {
