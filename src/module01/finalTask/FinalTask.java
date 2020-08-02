@@ -92,19 +92,17 @@ public class FinalTask {
     }
 
     private static void show() {
+        if (count < 0) {
+            System.out.println("The library is empty!");
+        }
         for (int i = 0; i <= count; i++) {
-            if (books[i].equals(null)) {
-                System.out.println("The library is empty!"); // не работает
-                break;
-            } else {
-                System.out.println(books[i]);
-            }
+            System.out.println(books[i]);
         }
         System.out.println();
     }
 
     private static void add() {
-        if (count < books.length) {
+        if (count < books.length - 1) {
             System.out.println("Enter the title of the book:");
             String nb = sc.nextLine();
             boolean isBookExists = false;
@@ -120,7 +118,7 @@ public class FinalTask {
                 System.out.println("Book added successfully!");
             }
         } else {
-            System.out.println("The library is full!"); // не работает
+            System.out.println("The library is full!");
         }
         System.out.println();
     }
@@ -151,7 +149,7 @@ public class FinalTask {
         String bookForDeleting = sc.nextLine();
         for (int i = 0; i <= count; i++) {
             if (books[i].equals(bookForDeleting)) {
-                for (int j = i; j < count; j++) {
+                for (int j = i; j < count + 1; j++) {
                     books[j] = books[j + 1];
                 }
                 isBookExists = true;
