@@ -20,7 +20,7 @@ public class FinalTask {
 
     public static void main(String[] args) {
 
-        System.out.println("Hello! Introduce yourself please: ");
+        System.out.println("Hello! This is a library.\nIntroduce yourself please: ");
         String name = sc.nextLine();
         sayHello(name);
 
