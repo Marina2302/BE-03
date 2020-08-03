@@ -20,7 +20,7 @@ public class FinalTask {
 
     public static void main(String[] args) {
 
-        System.out.println("Introduce yourself please: ");
+        System.out.println("Hello! Introduce yourself please: ");
         String name = sc.nextLine();
         sayHello(name);
 
@@ -43,7 +43,7 @@ public class FinalTask {
     }
 
     private static void sayHello(String name) {
-        System.out.println("Hello, " + name + "!");
+        System.out.println("Nice to meet you, " + name + "!");
     }
 
     private static void showMenu() {
@@ -167,8 +167,9 @@ public class FinalTask {
     private static void check() {
         System.out.println("Enter the title of the book to find it:");
         boolean isBookExists = false;
+        String bookForCheck = sc.nextLine();
         for (int i = 0; i <= count; i++) {
-            if (books[i].equals(sc.nextLine())) {
+            if (books[i].equals(bookForCheck)) {
                 System.out.println("This book exists in the library!");
                 isBookExists = true;
                 break;
