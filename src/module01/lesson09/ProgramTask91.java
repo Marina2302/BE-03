@@ -5,12 +5,12 @@ public class ProgramTask91 {
         /**
          * How many objects will be in a String Pool?
          *
-         * String st = "Java"; -- новый объект
-         * String st2 = new String("Java"); -- новый объект
-         * String st3 = st2.intern();  -- не новый объект
-         * String st4 = "java";  -- новый объект, т.к. регистр другой
+         * String st = "Java"; -- новый объект в пуле
+         * String st2 = new String("Java"); -- уже есть в пуле
+         * String st3 = st2.intern();  -- есть в пуле
+         * String st4 = "java";  -- новый объект в пуле, т.к. регистр другой
          * String st = null;  -- нет значения
-         * String st6 = new String("JAVA");   -- новый объект, регистр другой
+         * String st6 = new String("JAVA"); - новый объект в пуле, т.к. регистр другой
          */
         //4
     }
