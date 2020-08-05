@@ -169,7 +169,7 @@ public class FinalTask {
         boolean isBookExists = false;
         String bookForCheck = sc.nextLine();
         for (int i = 0; i <= count; i++) {
-            if (books[i].equals(bookForCheck)) {
+            if (books[i].equalsIgnoreCase(bookForCheck)) {
                 System.out.println("This book exists in the library!");
                 isBookExists = true;
                 break;
