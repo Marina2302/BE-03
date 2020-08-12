@@ -17,7 +17,7 @@ public class Cat {
     }
 
     public void print(){
-        System.out.println("Cat{name='" + name + "', age=" + age + ", breed=" + breed + ", owner=Person{name='" + owner.name + "', age=" + owner.age + "}}");
+        System.out.println("Cat{name='" + name + "', age=" + age + ", breed=" + breed + ", owner=Person{name='" + owner.getName() + "', age=" + owner.getAge() + "}}");
     }
 
     public enum Breed {

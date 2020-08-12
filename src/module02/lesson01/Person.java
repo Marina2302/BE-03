@@ -1,11 +1,11 @@
 package module02.lesson01;
 
-import java.time.*;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Person {
-    String name;
-    int age;
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
 
     public Person(){
 
@@ -30,12 +30,24 @@ public class Person {
         System.out.println("I think - it means I exist. (" + this.name + ") " + formatDateTime);
     }
 
-    public static void main(String[] args) {
-        Person person = new Person("Sam", 33);
-        person.meditation();
-        Person Stepan = new Person("Stepan", 30);
-        Cat Murzik = new Cat("Murzik", 5, Cat.Breed.NEBELUNG, Stepan);
-        Murzik.print();
+    public String getName() {
+        return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getName().compareTo(o.getName());
+    }
 }
