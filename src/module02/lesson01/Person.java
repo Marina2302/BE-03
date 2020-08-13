@@ -1,7 +1,6 @@
 package module02.lesson01;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Person implements Comparable<Person> {
     private String name;
@@ -24,10 +23,7 @@ public class Person implements Comparable<Person> {
     }
 
     public void meditation(){
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EE MMM dd HH:mm:ss yyyy");
-        String formatDateTime = now.format(formatter);
-        System.out.println("I think - it means I exist. (" + this.name + ") " + formatDateTime);
+        System.out.println("I think - it means I exist. (" + this.name + ") " + new Date().toString());
     }
 
     public String getName() {
