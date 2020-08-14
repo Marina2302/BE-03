@@ -8,5 +8,9 @@ public class Main {
         System.out.println(cat1.toString());
         System.out.println(cat2.toString());
         System.out.println(cat3.toString());
+        System.out.println();
+
+        Human human1 = new Human("Petr");
+        System.out.println(human1.hashCode());
     }
 }
