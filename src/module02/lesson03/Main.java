@@ -28,4 +28,30 @@ public class Main {
         programmer1.speak();
         emp.speak();
     }
+
+/*Questions
+Can an abstract class be instantiated? -- No
+
+Is it possible to define a constructor for an abstract class? -- Yes
+
+Can there be a non-abstract method in an abstract class? -- Yes
+
+Can there be abstract and non-abstract methods in an abstract class? -- Yes
+
+Can there be an abstract method in a non-abstract class? -- No
+
+Can a non-abstract method be overridden? -- Yes
+
+Are all methods of an interface abstract? -- No
+
+Is it possible to create an interface without a method? -- Yes
+
+What is the difference between an abstract class and an interface?
+-- The abstract class is inherited and the interface is implemented.
+Interface methods are implicitly abstract and cannot have implementations other than the default methods.
+We inherit from only one class, but we can implement several interfaces.
+An abstract class can have instance methods that implement default behavior.
+Variables declared in a Java interface are final by default.
+An abstract class can contain non-final variables.
+*/
 }
