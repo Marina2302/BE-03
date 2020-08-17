@@ -1,6 +1,6 @@
 package module02.lesson03;
 
-public class Programmer extends Employee{
+public class Programmer extends Employee implements Intellectual {
     private String name;
     private int age;
 

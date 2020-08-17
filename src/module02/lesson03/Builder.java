@@ -1,6 +1,6 @@
 package module02.lesson03;
 
-public class Builder extends Employee {
+public class Builder extends Employee implements Strongman {
     private String name;
     private int age;
 
