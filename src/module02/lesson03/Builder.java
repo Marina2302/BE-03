@@ -8,8 +8,7 @@ public class Builder extends Employee implements Strongman {
     }
 
     public Builder(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void build() {

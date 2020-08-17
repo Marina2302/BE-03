@@ -8,8 +8,7 @@ public class Doctor extends Employee implements Intellectual {
     }
 
     public Doctor(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void heal(){

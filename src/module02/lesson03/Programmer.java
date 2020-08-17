@@ -8,8 +8,7 @@ public class Programmer extends Employee implements Intellectual {
     }
 
     public Programmer(String name, int age) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
     }
 
     public void programming(){
