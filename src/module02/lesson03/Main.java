@@ -53,5 +53,7 @@ We inherit from only one class, but we can implement several interfaces.
 An abstract class can have instance methods that implement default behavior.
 Variables declared in a Java interface are final by default.
 An abstract class can contain non-final variables.
+Classes inherited from abstract classes have both a connection with their super-class (is a) and a lot in common between each other,
+while implemented classes may not have such connections at all
 */
 }
