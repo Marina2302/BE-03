@@ -17,5 +17,9 @@ public class AnotherClass {
             count++;
         }
         System.out.println(count);
+
+        System.out.println();
+        Lion lion = new Lion();
+        lion.setName("Lion");
     }
 }
