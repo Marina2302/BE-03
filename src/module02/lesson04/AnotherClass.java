@@ -21,5 +21,6 @@ public class AnotherClass {
         System.out.println();
         Lion lion = new Lion();
         lion.setName("Lion");
+        lion.setNewName(lion);
     }
 }

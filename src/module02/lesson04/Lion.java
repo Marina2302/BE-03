@@ -13,4 +13,11 @@ public class Lion {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setNewName(Lion lion){
+        lion.name = "Lion1";
+        System.out.println(lion.name);
+        lion = new Lion("New Lion");
+        System.out.println(lion.name);
+    }
 }
