@@ -1,5 +1,6 @@
 <h5>1. What is git?</h5>
-<p>Git is a distributed version control system</p>
+<p>Git is a distributed version control system.
+The version control system allows you to store several versions of the same document, if necessary, to revert to earlier versions, to determine who and when made a particular change, etc.</p>
 ---
 <h5>2. Git has three main states that your files can be in. List and explain.</h5>
 <p>Each file in working directory can be in one of two states: tracked or untracked. 
