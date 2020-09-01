@@ -1,6 +1,8 @@
 package module02.lesson07.task1;
 
-public abstract class Truck extends Vehicle {
+import module02.lesson07.task2.Garages;
+
+public abstract class Truck extends Vehicle implements Garages {
     private int maxWeight;
 
     public Truck() {

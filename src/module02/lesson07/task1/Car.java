@@ -1,6 +1,8 @@
 package module02.lesson07.task1;
 
-public abstract class Car extends Vehicle{
+import module02.lesson07.task2.Garages;
+
+public abstract class Car extends Vehicle implements Garages {
     private int maxSpeed;
 
     public Car() {
