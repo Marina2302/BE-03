@@ -1,6 +1,6 @@
 package module02.lesson07.task1;
 
-public abstract class Truck extends  Vehicle {
+public abstract class Truck extends Vehicle {
     private int maxWeight;
 
     public Truck() {
