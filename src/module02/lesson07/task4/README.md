@@ -23,6 +23,7 @@
     
     class C extends B {
     }
+  <p>Is it possible to do this?</p>
   <p>B b = new A(); - No</p>  
   <p>B b = new B(); - Yes</p>
   <p>B b = new C(); - Yes</p>
