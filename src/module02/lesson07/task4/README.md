@@ -5,7 +5,7 @@
 <p>Using the keyword super</p>
 ---
 <h5>Will the parent class constructor be called automatically?</h5>
-<p>No</p>
+<p>Yes</p>
 ---
 <h5>Will the parent class constructor be automatically called with arguments?</h5>
 <p>No</p>
