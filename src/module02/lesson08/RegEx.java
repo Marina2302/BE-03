@@ -24,10 +24,14 @@ public class RegEx {
 
             System.out.println("-----------------");
 
-            Pattern pattern1 = Pattern.compile("\\b[0-9]+[^%]\\b");
-            Matcher matcher1 = pattern1.matcher(st);
-            while (matcher1.find()){
-                System.out.println(matcher1.group());
+            String delim = " ";
+            String[] subStr = st.split(delim);
+            for(int i = 0; i < subStr.length; i++) {
+                Pattern pattern1 = Pattern.compile("^[0-9]+$");
+                Matcher matcher1 = pattern1.matcher(subStr[i]);
+                while (matcher1.find()){
+                    System.out.println(matcher1.group());
+                }
             }
     }
 }
