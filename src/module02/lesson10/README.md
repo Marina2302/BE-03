@@ -4,18 +4,16 @@ Code given. What code is enough to add to the inc () method instead of a comment
     class Quest1 {
         int counter;
         java.io.OutputStream out; Quest1(){/* инициализация out */} float inc() {
-        try { counter++;
-          out.write(counter); }
+        try { 
+          counter++;
+          out.write(counter); 
+        }
           //comment
         }
     }
 Answers:
-
-catch (java.io.OutputStreamException e){}; 2) catch (java.io.IOException e){};
-catch (java.io.OutputException e){};
-finally{};
+catch (java.io.IOException e){};
 return counter;
-return;
 
 2.
 What value will be returned when calling meth (5)?
@@ -33,13 +31,8 @@ What value will be returned when calling meth (5)?
           return y; 
         } //6
     }
-Answers:
-
+Answer:
 12;
-13;
-14;
-15;
-compilation error: Inexecutable code on line 4.
 
 3.
 What value will be returned when calling meth(12) if an ArithmeticException is thrown when calling mexcept(int x)?
@@ -59,13 +52,8 @@ What value will be returned when calling meth(12) if an ArithmeticException is t
             } 
         }
     }
-Answers:
-
-11;
-12;
-13;
+Answer:
 14;
-compilation error due to missing return after block finally.
 
 4.
 Which of the following definitions of the show () method can legally be used use instead of comment // CODE in class Quest4?
@@ -77,11 +65,9 @@ Which of the following definitions of the show () method can legally be used use
         //code
     }
 Answers:
-
-void show (int i) throws Exception {/realisation*/}
+Quest4 should not be public, then:
 void show (long i) throws IOException {/realisation*/}
 void show (short i) {/realisation*/}
-public void show (int i) throws IOException {/realisation*/}
 
 5.
 Code given. Which declaration of the ioRead () method should be used instead of a comment to successfully compile and execute the code?
@@ -93,9 +79,7 @@ Code given. Which declaration of the ioRead () method should be used instead of 
             } catch(IOException e) {}
         }
     }
-Answers:
-
+Answer:
+I did not find a comment in this code, 
+but if you imagine that you need to add a method at the end, then:
 private static void ioRead() throws IOException { };
-public static void ioRead() throw IOException { };
-public static void ioRead() { };
-public static void ioRead() throws Exception { };
