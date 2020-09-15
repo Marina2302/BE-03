@@ -61,9 +61,7 @@
         //code
     }
 <p>Answers:</p>
-<p>Quest4 should not be public, then:</p>
-<p>void show (long i) throws IOException {/realisation*/}</p>
-<p>void show (short i) {/realisation*/}</p>
+<p>none of the options</p>
 
 <h5>5. Code given. Which declaration of the ioRead () method should be used instead of a comment to successfully compile and execute the code?</h5>
 
