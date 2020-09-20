@@ -1,11 +1,11 @@
 package module02.lesson12;
 
-public class ParameterizedClass<String, Integer, Boolean> {
-    private String st;
-    private Integer in;
-    private Boolean bl;
+public class ParameterizedClass<T, V, K> {
+    private T st;
+    private V in;
+    private K bl;
 
-    public Boolean get(){
+    public K get(){
         return bl;
     }
 }
