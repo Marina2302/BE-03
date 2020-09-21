@@ -28,11 +28,12 @@ public class Main {
             e.printStackTrace();
         }
 
+        System.out.println(Arrays.toString(Person.class.getDeclaredFields()));
         System.out.println(Arrays.toString(Person.class.getMethods()));
         System.out.println("-----------------------------");
         System.out.println(Arrays.toString(Person.class.getDeclaredMethods()));
 
-        System.out.println(Arrays.toString(Person.class.getInterfaces()));
+        System.out.println(Modifier.isInterface(Person.class.getModifiers()));
         System.out.println(Modifier.isPublic(Person.class.getModifiers()));
         System.out.println(Modifier.isStatic(Person.class.getModifiers()));
     }
