@@ -2,9 +2,9 @@ package module02.lesson12;
 
 public class Main {
     public static void main(String[] args) {
-        ParameterizedClass ob = new ParameterizedClass();
-        ParameterizedClass ob1 = new ParameterizedClass();
-        ParameterizedClass ob2 = new ParameterizedClass();
+        ParameterizedClass<String, Integer, Double> ob = new ParameterizedClass();
+        ParameterizedClass<Double, Integer, String> ob1 = new ParameterizedClass();
+        ParameterizedClass<Integer, String, Double> ob2 = new ParameterizedClass();
 
         ob.get();
         ob1.get();

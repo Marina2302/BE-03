@@ -11,11 +11,11 @@ public class ParameterizedClass<T, V, K> {
         return bl;
     }
 
-    public List<String> getDefaultList(List<String> list){
-        list.add("hello");
-        list.add("hello");
-        list.add("hello");
-        list.add("hello");
+    public List<T> getDefaultList(List<T> list){
+        list.add((T) "hello");
+        list.add((T) "hello");
+        list.add((T) "hello");
+        list.add((T) "hello");
         return list;
     }
 }
