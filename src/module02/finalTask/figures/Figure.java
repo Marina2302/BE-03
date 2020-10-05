@@ -18,7 +18,7 @@ public abstract class Figure {
 
     public abstract Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException;
 
-    String icon() {
+    public String icon() {
         return String.format(
                 "%s.png", getClass().getSimpleName()
         );
@@ -77,10 +77,10 @@ public abstract class Figure {
     public Cell[] moveOnlyForwardOneStep(Cell source, Cell dest, Boolean color) throws ImpossibleMoveException {
         boolean valid = false;
         int move = 0;  //If color true - color is black
-        if (color) {
+        if (!color) {
             move = 1;
         }
-        if (!color) {  // if color false - color is white
+        if (color) {  // if color false - color is white
             move = -1;
         }
         Cell[] steps = new Cell[0];
