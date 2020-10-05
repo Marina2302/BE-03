@@ -1,5 +1,6 @@
-package module02.finalTask;
+package module02.finalTask.figures;
 
+import module02.finalTask.Cell;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
 public abstract class Figure {

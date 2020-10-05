@@ -1,11 +1,11 @@
-package module02.finalTask.white;
+package module02.finalTask.figures.black;
 
 import module02.finalTask.Cell;
-import module02.finalTask.Figure;
+import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
-public class RookWhite extends Figure {
-    public RookWhite(final Cell position) {
+public class RookBlack extends Figure {
+    public RookBlack(final Cell position) {
         super(position);
     }
 
@@ -16,6 +16,6 @@ public class RookWhite extends Figure {
 
     @Override
     public Figure copy(Cell dest) {
-        return new RookWhite(dest);
+        return new RookBlack(dest);
     }
 }

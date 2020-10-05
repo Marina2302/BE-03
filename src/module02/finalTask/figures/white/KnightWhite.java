@@ -1,12 +1,11 @@
-package module02.finalTask.black;
+package module02.finalTask.figures.white;
 
 import module02.finalTask.Cell;
-import module02.finalTask.Figure;
+import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
-public class KnightBlack extends Figure {
-
-    public KnightBlack(final Cell position) {
+public class KnightWhite extends Figure {
+    public KnightWhite(final Cell position) {
         super(position);
     }
 
@@ -17,6 +16,6 @@ public class KnightBlack extends Figure {
 
     @Override
     public Figure copy(Cell dest) {
-        return new KnightBlack(dest);
+        return new KnightWhite(dest);
     }
 }

@@ -1,21 +1,21 @@
-package module02.finalTask.white;
+package module02.finalTask.figures.black;
 
 import module02.finalTask.Cell;
-import module02.finalTask.Figure;
+import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
-public class BishopWhite extends Figure {
-    public BishopWhite(final Cell position) {
+public class KingBlack extends Figure {
+    public KingBlack(final Cell position) {
         super(position);
     }
 
     @Override
     public Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException {
-        return moveDiagonal(source, dest);
+        return moveAllWayOneStep(source, dest);
     }
 
     @Override
     public Figure copy(Cell dest) {
-        return new BishopWhite(dest);
+        return new KingBlack(dest);
     }
 }

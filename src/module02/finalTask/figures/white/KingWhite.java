@@ -1,21 +1,21 @@
-package module02.finalTask.black;
+package module02.finalTask.figures.white;
 
 import module02.finalTask.Cell;
-import module02.finalTask.Figure;
+import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
-public class RookBlack extends Figure {
-    public RookBlack(final Cell position) {
+public class KingWhite extends Figure {
+    public KingWhite(final Cell position) {
         super(position);
     }
 
     @Override
     public Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException {
-        return moveInline(source, dest);
+        return moveAllWayOneStep(source, dest);
     }
 
     @Override
     public Figure copy(Cell dest) {
-        return new RookBlack(dest);
+        return new KingWhite(dest);
     }
 }
