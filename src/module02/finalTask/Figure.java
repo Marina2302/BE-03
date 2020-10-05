@@ -1,5 +1,7 @@
 package module02.finalTask;
 
+import module02.finalTask.exceptions.ImpossibleMoveException;
+
 public abstract class Figure {
 
     private final Cell position;

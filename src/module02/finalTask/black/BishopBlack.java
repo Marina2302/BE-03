@@ -2,7 +2,7 @@ package module02.finalTask.black;
 
 import module02.finalTask.Cell;
 import module02.finalTask.Figure;
-import module02.finalTask.ImpossibleMoveException;
+import module02.finalTask.exceptions.ImpossibleMoveException;
 
 public class BishopBlack extends Figure {
     public BishopBlack(final Cell position) {
