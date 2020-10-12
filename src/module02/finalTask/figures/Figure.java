@@ -3,6 +3,9 @@ package module02.finalTask.figures;
 import module02.finalTask.Cell;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Figure {
 
     private final Cell position;
@@ -16,7 +19,7 @@ public abstract class Figure {
         return this.position;
     }
 
-    public abstract Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException;
+    public abstract ArrayList way(Cell source, Cell dest) throws ImpossibleMoveException;
 
     public String icon() {
         return String.format(
@@ -26,9 +29,9 @@ public abstract class Figure {
 
     public abstract Figure copy(Cell dest);
 
-    public Cell[] moveInline(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> moveInline(Cell source, Cell dest) throws ImpossibleMoveException {
         boolean valid = false;
-        Cell[] steps = new Cell[0];
+        List<Cell> steps = new ArrayList<>();
         int deltaX = Integer.compare(dest.getX(), source.getX());
         int deltaY = Integer.compare(dest.getY(), source.getY());
         int moveX = Math.abs(source.getX() - dest.getX());
@@ -38,10 +41,9 @@ public abstract class Figure {
                 || source.getY() == dest.getY() - moveY && source.getX() == dest.getX()
                 || source.getY() == dest.getY() && source.getX() == dest.getX() + moveX
                 || source.getY() == dest.getY() && source.getX() == dest.getX() - moveX) {
-            steps = new Cell[size];
-            steps[0] = Cell.findCell(source.getX() + deltaX, source.getY() + deltaY);
-            for (int index = 1; index < steps.length; index++) {
-                steps[index] = Cell.findCell(steps[index - 1].getX() + deltaX, steps[index - 1].getY() + deltaY);
+            steps.add(Cell.findCell(source.getX() + deltaX, source.getY() + deltaY));
+            for (int index = 1; index < size-1; index++) {
+                steps.set(index, Cell.findCell(steps.get(index - 1).getX() + deltaX, steps.get(index - 1).getY() + deltaY));
             }
             valid = true;
         }
