@@ -53,9 +53,9 @@ public abstract class Figure {
         return steps;
     }
 
-    public Cell[] moveDiagonal(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> moveDiagonal(Cell source, Cell dest) throws ImpossibleMoveException {
         boolean valid = false;
-        Cell[] steps = new Cell[0];
+        List<Cell> steps = new ArrayList<>();
         int deltaX = Integer.compare(dest.getX(), source.getX());
         int deltaY = Integer.compare(dest.getY(), source.getY());
         int move = Math.abs(source.getX() - dest.getX());
@@ -63,10 +63,9 @@ public abstract class Figure {
                 || source.getY() == dest.getY() + move && source.getX() == dest.getX() - move
                 || source.getY() == dest.getY() - move && source.getX() == dest.getX() + move
                 || source.getY() == dest.getY() - move && source.getX() == dest.getX() - move) {
-            steps = new Cell[move];
-            steps[0] = Cell.findCell(source.getX() + deltaX, source.getY() + deltaY);
-            for (int index = 1; index < steps.length; index++) {
-                steps[index] = Cell.findCell(steps[index - 1].getX() + deltaX, steps[index - 1].getY() + deltaY);
+            steps.add(Cell.findCell(source.getX() + deltaX, source.getY() + deltaY));
+            for (int index = 1; index < steps.size()-1; index++) {
+                steps.set(index, Cell.findCell(steps.get(index - 1).getX() + deltaX, steps.get(index - 1).getY() + deltaY));
             }
             valid = true;
         }
