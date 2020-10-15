@@ -26,7 +26,7 @@ public class Logic {
         if (!index.isPresent()) {
             throw new FigureNotFoundException();
         }
-        Cell[] steps = this.figures.get(index.get()).way(source, dest);
+        List<Cell> steps = this.figures.get(index.get()).way(source, dest);
         for (Cell step1 : steps) {
             Optional<Integer> empty = findBy(step1);
             if (empty.isPresent() || target.isPresent()) {

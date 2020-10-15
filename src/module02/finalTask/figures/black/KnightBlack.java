@@ -4,6 +4,8 @@ import module02.finalTask.Cell;
 import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
+import java.util.List;
+
 public class KnightBlack extends Figure {
 
     public KnightBlack(final Cell position) {
@@ -11,7 +13,7 @@ public class KnightBlack extends Figure {
     }
 
     @Override
-    public Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> way(Cell source, Cell dest) throws ImpossibleMoveException {
         return moveZigZag(source, dest);
     }
 

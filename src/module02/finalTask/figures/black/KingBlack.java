@@ -4,13 +4,15 @@ import module02.finalTask.Cell;
 import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
 
+import java.util.List;
+
 public class KingBlack extends Figure {
     public KingBlack(final Cell position) {
         super(position);
     }
 
     @Override
-    public Cell[] way(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> way(Cell source, Cell dest) throws ImpossibleMoveException {
         return moveAllWayOneStep(source, dest);
     }
 

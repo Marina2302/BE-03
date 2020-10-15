@@ -1,10 +1,10 @@
 package module02.finalTask.figures.black;
 
 import module02.finalTask.Cell;
-import module02.finalTask.figures.Figure;
 import module02.finalTask.exceptions.ImpossibleMoveException;
+import module02.finalTask.figures.Figure;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class BishopBlack extends Figure {
     public BishopBlack(final Cell position) {
@@ -12,7 +12,7 @@ public class BishopBlack extends Figure {
     }
 
     @Override
-    public ArrayList way(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> way(Cell source, Cell dest) throws ImpossibleMoveException {
         return moveDiagonal(source, dest);
     }
 

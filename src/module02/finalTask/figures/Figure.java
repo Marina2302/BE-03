@@ -19,7 +19,7 @@ public abstract class Figure {
         return this.position;
     }
 
-    public abstract ArrayList way(Cell source, Cell dest) throws ImpossibleMoveException;
+    public abstract List<Cell> way(Cell source, Cell dest) throws ImpossibleMoveException;
 
     public String icon() {
         return String.format(
