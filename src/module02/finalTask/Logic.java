@@ -12,10 +12,9 @@ import java.util.stream.IntStream;
 
 public class Logic {
     private  List<Figure> figures = new ArrayList();
-    private int index = 0;
 
     public void add(Figure figure) {
-        this.figures.set(this.index++, figure);
+        this.figures.add(figure);
     }
 
     public boolean move(Cell source, Cell dest) throws ImpossibleMoveException, OccupiedWayException,
@@ -44,7 +43,6 @@ public class Logic {
         for (int position = 0; position != this.figures.size(); position++) {
             this.figures.set(position, null);
         }
-        this.index = 0;
     }
 
     private Optional<Integer> findBy(Cell cell) {
