@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class Logic {
-    private  List figures = new ArrayList();
+    private  List<Figure> figures = new ArrayList();
     private int index = 0;
 
     public void add(Figure figure) {
@@ -33,7 +33,7 @@ public class Logic {
                 throw new OccupiedWayException();
             }
         }
-        if (steps.length > 0 && steps[steps.length - 1].equals(dest)) {
+        if (steps.size() > 0 && steps.get(steps.size() - 1).equals(dest)) {
             rst = true;
             this.figures.set(index.get(), this.figures.get(index.get()).copy(dest));
         }
