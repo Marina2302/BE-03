@@ -75,7 +75,7 @@ public abstract class Figure {
         return steps;
     }
 
-    public Cell[] moveOnlyForwardOneStep(Cell source, Cell dest, Boolean color) throws ImpossibleMoveException {
+    public List<Cell> moveOnlyForwardOneStep(Cell source, Cell dest, Boolean color) throws ImpossibleMoveException {
         boolean valid = false;
         int move = 0;  //If color true - color is black
         if (!color) {
@@ -84,9 +84,9 @@ public abstract class Figure {
         if (color) {  // if color false - color is white
             move = -1;
         }
-        Cell[] steps = new Cell[0];
+        List<Cell> steps = new ArrayList<>();
         if (source.getY() == dest.getY() + move && source.getX() == dest.getX()) {
-            steps = new Cell[] {dest };
+            steps.add(dest);
             valid = true;
         }
         if (!valid) {
@@ -95,9 +95,9 @@ public abstract class Figure {
         return steps;
     }
 
-    public Cell[] moveZigZag(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> moveZigZag(Cell source, Cell dest) throws ImpossibleMoveException {
         boolean valid = false;
-        Cell[] steps = new Cell[0];
+        List<Cell> steps = new ArrayList<>();
         if ((source.getY() == dest.getY() + 2 && source.getX() == dest.getX() + 1)
                 || (source.getY() == dest.getY() + 2 && source.getX() == dest.getX() - 1)
                 || (source.getY() == dest.getY() - 2 && source.getX() == dest.getX() + 1)
@@ -106,7 +106,7 @@ public abstract class Figure {
                 || (source.getY() == dest.getY() - 1 && source.getX() == dest.getX() + 2)
                 || (source.getY() == dest.getY() + 1 && source.getX() == dest.getX() - 2)
                 || (source.getY() == dest.getY() - 1 && source.getX() == dest.getX() - 2)) {
-            steps = new Cell[] {dest };
+            steps.add(dest);
             valid = true;
         }
         if (!valid) {
@@ -115,9 +115,9 @@ public abstract class Figure {
         return steps;
     }
 
-    public Cell[] moveAllWayOneStep(Cell source, Cell dest) throws ImpossibleMoveException {
+    public List<Cell> moveAllWayOneStep(Cell source, Cell dest) throws ImpossibleMoveException {
         boolean valid = false;
-        Cell[] steps = new Cell[0];
+        List<Cell> steps = new ArrayList<>();
         if ((source.getY() == dest.getY() + 1 && source.getX() == dest.getX() + 1)
                 || (source.getY() == dest.getY() + 1 && source.getX() == dest.getX() - 1)
                 || (source.getY() == dest.getY() - 1 && source.getX() == dest.getX() + 1)
@@ -126,7 +126,7 @@ public abstract class Figure {
                 || (source.getY() == dest.getY() - 1 && source.getX() == dest.getX())
                 || (source.getY() == dest.getY() && source.getX() == dest.getX() + 1)
                 || (source.getY() == dest.getY() && source.getX() == dest.getX() - 1)) {
-            steps = new Cell[] {dest};
+            steps.add(dest);
             valid = true;
         }
         if (!valid) {
@@ -135,8 +135,8 @@ public abstract class Figure {
         return steps;
     }
 
-    public Cell[] godLikeMove(Cell source, Cell dest) throws ImpossibleMoveException {
-        Cell[] steps;
+    public List<Cell> godLikeMove(Cell source, Cell dest) throws ImpossibleMoveException {
+        List<Cell> steps;
         int moveX = Math.abs(source.getX() - dest.getX());
         int moveY = Math.abs(source.getY() - dest.getY());
         if (moveX == moveY) {
