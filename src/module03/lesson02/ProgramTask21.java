@@ -3,6 +3,7 @@ package module03.lesson02;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 public class ProgramTask21 {
     /**
@@ -19,6 +20,9 @@ public class ProgramTask21 {
         linkedList.add("test");
         linkedList.add("Hello");
         linkedList.add("Bye");
+        for (int i = 0; i < 1000; i++) {
+            linkedList.add(UUID.randomUUID().toString());
+        }
         long endTime = System.nanoTime();
         System.out.println("Total execution time for linkedList method add: " + (endTime - startTime) + "ns");
 
@@ -28,6 +32,9 @@ public class ProgramTask21 {
         arrayList.add("test");
         arrayList.add("Hello");
         arrayList.add("Bye");
+        for (int i = 0; i < 1000; i++) {
+            arrayList.add(UUID.randomUUID().toString());
+        }
         long endTime1 = System.nanoTime();
         System.out.println("Total execution time for arrayList method add: " + (endTime1 - startTime1) + "ns");
         System.out.println("-----------------");
