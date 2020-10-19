@@ -14,10 +14,23 @@ public class ProgramTask22 {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+        int minLenInd = 0;
+        int maxLenInd = 0;
         for (int i = 0; i < 10; i++) {
             list.add(sc.nextLine());
+            if (list.get(minLenInd).length() > list.get(i).length()) {
+                minLenInd = i;
+            }
+            if (list.get(maxLenInd).length() < list.get(i).length()){
+                maxLenInd = i;
+            }
+        }
+        sc.close();
+        if(minLenInd < maxLenInd){
+            System.out.println(list.get(minLenInd));
+        }else {
+            System.out.println(list.get(maxLenInd));
         }
         System.out.println(list);
-        System.out.println(list.get(0));
     }
 }
