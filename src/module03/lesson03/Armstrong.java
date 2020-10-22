@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class Armstrong {
     public static void main(String[] args) {
-        long[] numbers = getNumbers(1000);
-        System.out.println(Arrays.toString(numbers));
+       long[] numbers = getNumbers(1000);
+       System.out.println(Arrays.toString(numbers));
     }
 
     public static long[] getNumbers(long N) {
