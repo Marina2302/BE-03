@@ -5,6 +5,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Now you have the opportunity to make Armstrong's algorithm more efficient.
+ * The algorithm works well for short distances, but is downright bad for big data.
+ * Now the optimization requirements (for any long number!):
+ * Speed limit - 10 seconds
+ * Memory limit - 50 megabyte
+ */
 public class OptimArmstrong {
     public static void main(String[] args) {
         long a = System.currentTimeMillis();
