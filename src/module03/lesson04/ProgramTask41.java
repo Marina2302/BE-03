@@ -3,6 +3,10 @@ package module03.lesson04;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * Create a queue of people. Each person must have a number, which is determined randomly in the range from 1 to 10.
+ * If a person has a number greater than five, return him to the end of the queue, if less than five, delete him. Print out the people who remain in the queue.
+ */
 public class ProgramTask41 {
     public static void main(String[] args) {
         Queue<Person> queue = new LinkedList<>();
