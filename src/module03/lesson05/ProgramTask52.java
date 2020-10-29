@@ -1,5 +1,6 @@
 package module03.lesson05;
 
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -19,7 +20,16 @@ public class ProgramTask52 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TreeSet<Character> letters = new TreeSet<>();
+            String s = sc.nextLine().toLowerCase().replaceAll("[^\\p{Alpha}]", "");
+            for (int i = 0; i < s.length(); i++) {
+                letters.add(s.charAt(i));
+            }
 
+        Iterator<Character> iterator = letters.iterator();
+        int n = letters.size() < 5 ? letters.size() : 5;
+
+        for (int i = 0; i < n; i++) {
+            System.out.print((iterator.next()));
+        }
     }
 }
-
