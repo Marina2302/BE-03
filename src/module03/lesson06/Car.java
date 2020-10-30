@@ -36,7 +36,6 @@ public class Car implements Comparable<Car> {
         System.out.println(list.toString());
         Comparator.sortCarByModelAscAndSpeedDesc(list);
         System.out.println(list.toString());
-
     }
 
     public Car(String model, int speed) {
@@ -63,5 +62,3 @@ public class Car implements Comparable<Car> {
                 '}';
     }
 }
-
-
