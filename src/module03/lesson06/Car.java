@@ -20,7 +20,7 @@ public class Car implements Comparable<Car> {
 
     public static void main(String[] args) {
 
-        List<Car> list = new ArrayList();
+        List<Car> list = new ArrayList<>();
         list.add(new Car("Audi", 250));
         list.add(new Car("BMW", 253));
         list.add(new Car("Audi", 210));
