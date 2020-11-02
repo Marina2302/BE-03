@@ -26,7 +26,7 @@ public class ProgramTask52 {
             }
 
         Iterator<Character> iterator = letters.iterator();
-        int n = letters.size() < 5 ? letters.size() : 5;
+        int n = Math.min(letters.size(), 5);
 
         for (int i = 0; i < n; i++) {
             System.out.print((iterator.next()));
