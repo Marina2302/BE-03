@@ -14,6 +14,7 @@ public class ProgramTask12 {
                 count++;
             }
         }
+        sc.close();
         System.out.println(count);
     }
 }
