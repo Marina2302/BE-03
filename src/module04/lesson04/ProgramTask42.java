@@ -16,5 +16,8 @@ public class ProgramTask42 {
 
         List<String> sorted = collection.stream().sorted().collect(Collectors.toList());
         System.out.println("sorted = " + sorted);
+
+        List<String> distinctReverse = collection.stream().sorted((o1, o2) -> -o1.compareTo(o2)).distinct().collect(Collectors.toList());
+        System.out.println("distinctReverse = " + distinctReverse);
     }
 }
