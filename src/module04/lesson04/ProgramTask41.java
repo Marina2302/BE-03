@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * Return two items starting with the second
  * Return the last element of the collection
  */
-public class ProgramTask1 {
+public class ProgramTask41 {
     public static void main(String[] args) {
         Collection<String> collection = Arrays.asList("a1", "a2", "a3", "a1");
 
