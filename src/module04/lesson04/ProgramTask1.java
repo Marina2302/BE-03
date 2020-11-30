@@ -16,5 +16,8 @@ public class ProgramTask1 {
 
         List<String> fromTo = collection.stream().skip(1).limit(2).collect(Collectors.toList());
         System.out.println("fromTo = " + fromTo);
+
+        String last = collection.stream().skip(collection.size() - 1).findAny().orElse("1");
+        System.out.println("last = " + last );
     }
 }
