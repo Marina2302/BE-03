@@ -1,6 +1,8 @@
 package module04.lesson05;
 
-public class Author {
+import java.io.Serializable;
+
+public class Author implements Serializable {
     private String name;
     private int age;
     private transient String uniqueNum;
@@ -21,5 +23,14 @@ public class Author {
 
     public String getUniqueNum() {
         return uniqueNum;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", uniqueNum='" + uniqueNum + '\'' +
+                '}';
     }
 }
